@@ -35,6 +35,7 @@ docker-compose down
 
 6. Перезапуск после изменений
 
+
 docker-compose down
 docker-compose build --no-cache
 docker-compose up -d
@@ -46,7 +47,9 @@ pip install -r requirements.txt
 Запуск
 
 cd proxy
+
 python tg_ws_proxy.py --host 0.0.0.0 --port 8444 --secret $(cat ../secret.txt)
+
 Или с автоматической генерацией секрета:
 
 
