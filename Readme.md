@@ -3,7 +3,7 @@ TG MTProto WS Bridge Proxy
 
 Быстрый запуск через Docker
 1. Скачайте репозиторий
-text
+
 git clone https://github.com/whaldeyw/proxy_local.git
 
 cd tg-proxy
@@ -42,6 +42,7 @@ docker-compose up -d
 Установка зависимостей
 
 pip install -r requirements.txt
+
 Запуск
 
 cd proxy
@@ -50,7 +51,9 @@ python tg_ws_proxy.py --host 0.0.0.0 --port 8444 --secret $(cat ../secret.txt)
 
 
 python tg_ws_proxy.py --host 0.0.0.0 --port 8444
+
 Важно
+
 После запуска найдите в логах ссылку для подключения
 
 Ссылка имеет формат: tg://proxy?server=IP&port=8444&secret=ddСЕКРЕТ
