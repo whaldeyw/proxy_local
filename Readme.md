@@ -4,7 +4,7 @@ TG MTProto WS Bridge Proxy
 Быстрый запуск через Docker
 1. Скачайте репозиторий
 text
-git clone https://github.com/yourusername/tg-proxy.git
+git clone https://github.com/whaldeyw/proxy_local.git
 cd tg-proxy
 2. Создайте файл с секретом
 text
