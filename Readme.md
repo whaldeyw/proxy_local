@@ -6,6 +6,7 @@ TG MTProto WS Bridge Proxy
 text
 git clone https://github.com/whaldeyw/proxy_local.git
 cd tg-proxy
+
 2. Создайте файл с секретом
 text
 echo "ваш_секрет_здесь" > secret.txt
@@ -13,9 +14,11 @@ echo "ваш_секрет_здесь" > secret.txt
 
 text
 openssl rand -hex 16
+
 3. Запустите
 text
 docker-compose up -d
+
 4. Проверьте логи
 text
 docker-compose logs -f
@@ -23,9 +26,11 @@ docker-compose logs -f
 
 text
 tg://proxy?server=IP_вашего_сервера&port=8444&secret=ddВАШ_СЕКРЕТ
+
 5. Остановка
 text
 docker-compose down
+
 6. Перезапуск после изменений
 text
 docker-compose down
