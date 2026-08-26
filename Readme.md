@@ -6,7 +6,7 @@ TG MTProto WS Bridge Proxy
 
 git clone https://github.com/whaldeyw/proxy_local.git
 
-cd tg-proxy
+cd proxy_local
 
 2. Создайте файл с секретом
 
