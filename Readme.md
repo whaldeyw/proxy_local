@@ -28,8 +28,11 @@ nano .env
 
 # Настройки прокси
 PORT=1248                      # Порт для прокси
+
 HOST=0.0.0.0                   # Хост (оставьте 0.0.0.0)
+
 SECRET=2ba522c2a1d68eda0cc421bfb18cc826  # 32 символа hex
+
 
 # Режим работы
 LOCAL_MODE=false               # true - 127.0.0.1, false - внешний IP
@@ -151,20 +154,6 @@ docker-compose up -d
 Вход в контейнер
 
 docker exec -it tg-proxy sh
-
-Структура проекта
-
-proxy_local/
-├── .env                     # Переменные окружения
-├── docker-compose.yml       # Docker Compose конфиг
-├── Dockerfile               # Dockerfile
-├── requirements.txt         # Python зависимости
-├── entrypoint.py            # Точка входа (определение IP)
-├── proxy/                   # Исходники прокси
-│   ├── tg_ws_proxy.py
-│   ├── utils.py
-│   └── ...
-└── secret.txt               # Секрет (опционально)
 
 Ссылка для подключения
 
