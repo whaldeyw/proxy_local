@@ -1,0 +1,49 @@
+# Виртуальное окружение
+.venv/
+venv/
+env/
+ENV/
+*.pyc
+__pycache__/
+
+# IDE
+.idea/
+.vscode/
+*.iml
+.DS_Store
+
+# Docker
+*.log
+*.pid
+docker-compose.override.yml
+
+# Секреты и ключи (исключаем secret.txt)
+secret.txt
+*.key
+*.pem
+*.crt
+*.p12
+
+# Логи
+logs/
+*.log
+
+# Файлы сборки
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Тесты
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Временные файлы
+*.tmp
+*.temp
+*.swp
+*.swo
+
+# Но оставляем .env (он без секретов)
+!.env
