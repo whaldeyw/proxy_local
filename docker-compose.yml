@@ -1,21 +1,19 @@
 services:
   tg-proxy:
     build: .
-    container_name: tg-proxy
-    restart: unless-stopped    # Перезапуск только если не остановлен вручную
+    container_name: ${CONTAINER_NAME:-tg-proxy}
+    restart: unless-stopped
     ports:
-      - "8444:8444"
+      - "${PORT}:${PORT}"
     environment:
-      - PORT=8444
+      - PORT=${PORT}
+      - HOST=${HOST:-0.0.0.0}
+      - SECRET=${SECRET}
+      - EXTERNAL_IP=${EXTERNAL_IP:-}
       - PYTHONUNBUFFERED=1
-    volumes:
-      - ./secret.txt:/app/secret.txt:ro
-    healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:8444/"]
-      interval: 30s
-      timeout: 10s
-      retries: 3
-      start_period: 10s
+      - TZ=${TIMEZONE:-Europe/Moscow}
+    env_file:
+      - .env
     logging:
       driver: "json-file"
       options:
